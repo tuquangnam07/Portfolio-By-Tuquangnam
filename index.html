@@ -1,27 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Tu Quang Nam</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/favicon_io/favicon.ico" type="image/x-icon">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.7;
+            background: linear-gradient(135deg, #eef2f7 0%, #dfe9f3 100%);
+            min-height: 100vh;
+            padding: 20px 12px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 35px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 14px 45px rgba(0, 0, 0, 0.14);
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #eee;
+        }
+
+        header h1 {
+            font-size: 27px;
+            color: #222;
+            margin-bottom: 22px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        header h1 b {
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #007bff;
+            box-shadow: 0 6px 18px rgba(0, 123, 255, 0.35);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(0, 123, 255, 0.5);
+        }
+
+        main {
+            padding: 30px 0;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        section h2 {
+            font-size: 20px;
+            color: #007bff;
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 4px solid #007bff;
+            font-weight: 600;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            padding: 9px 0 9px 28px;
+            position: relative;
+            border-bottom: 1px dashed #eee;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .project-item {
+            background-color: #f8fafc;
+            border: 1px solid #e8eef5;
+            border-left: 4px solid #007bff;
+            border-radius: 10px;
+            padding: 16px 18px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 123, 255, 0.15);
+        }
+
+        .project-item h3 {
+            font-size: 16px;
+            color: #222;
+            margin-bottom: 6px;
+        }
+
+        .project-item p {
+            font-size: 14.5px;
+            color: #666;
+            margin-bottom: 6px;
+        }
+
+        .project-item a {
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 22px;
+            border-top: 2px solid #eee;
+            font-size: 14px;
+            color: #999;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 20px;
+                margin: 15px auto;
+            }
+
+            header h1 {
+                font-size: 22px;
+            }
+
+            header img {
+                width: 120px;
+                height: 120px;
+            }
+
+            section h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
+
         <header>
-            <h1>Xin Chao, Toi La <b>Từ Quang Nam</b></h1>
-            <img src="img/avt/avt_demo.jpg" alt="">
+            <h1>Xin Chào, Tôi Là <b>Tu Quang Nam</b></h1>
+            <img src="img/avt/avt_demo.jpg" alt="Ảnh đại diện Tu Quang Nam">
         </header>
+
         <main>
 
             <section>
-                <h2>Gioi Thieu Ban Than</h2>
-                <p>Toi la sinh vien nam 2 cua truong Dai Hoc Vinh. </p>
+                <h2>Giới Thiệu Bản Thân</h2>
+                <p>Tôi là sinh viên năm 2 của trường Đại Học Vinh.</p>
+                <p>Tôi yêu thích lập trình web và đang không ngừng học hỏi để phát triển kỹ năng của mình.</p>
             </section>
 
             <section>
-                <h2>Ki Nang</h2>
+                <h2>Kỹ Năng</h2>
                 <ul>
                     <li>HTML, CSS, JS</li>
                     <li>Python</li>
@@ -30,15 +223,43 @@
             </section>
 
             <section>
-                <h2>Lien He</h2>
-                <p>Neu ban muon lien he hoac co cau hoi, ban co the lien he voi toi </p>
-                <p>📧 Email: <a href="mailto:tuquangnamht2007@gmail.com">tuquangnamht2007@gmail.com</a></p>
-                <p>📘 Facebook: <a href="https://facebook.com/tuquangnam07" target="_blank">Từ Quang Nam</a></p>
+                <h2>Dự Án Cá Nhân</h2>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h3>Website Portfolio Cá Nhân</h3>
+                        <p>Trang web giới thiệu bản thân được xây dựng bằng HTML và CSS, thiết kế responsive trên mọi thiết bị.</p>
+                        <a href="#" target="_blank">Xem chi tiết →</a>
+                    </div>
+                    <div class="project-item">
+                        <h3>Ứng Dụng Quản Lý Công Việc</h3>
+                        <p>Ứng dụng nhỏ giúp quản lý công việc hằng ngày, viết bằng Python với giao diện dòng lệnh đơn giản.</p>
+                        <a href="#" target="_blank">Xem chi tiết →</a>
+                    </div>
+                    <div class="project-item">
+                        <h3>Trang Web Tính Toán Đơn Giản</h3>
+                        <p>Trang web thực hiện các phép tính cơ bản, sử dụng HTML, CSS và JavaScript thuần.</p>
+                        <a href="#" target="_blank">Xem chi tiết →</a>
+                    </div>
+                </div>
             </section>
+
+            <section>
+                <h2>Liên Hệ</h2>
+                <p>Nếu bạn muốn liên hệ hoặc có câu hỏi, bạn có thể liên hệ với tôi qua:</p>
+                <p>
+                    📧 Email:
+                    <a href="mailto:tuquangnamht2007@gmail.com">tuquangnamht2007@gmail.com</a>
+                </p>
+                <p>
+                    📘 Facebook:
+                    <a href="https://facebook.com/tuquangnam07" target="_blank">Tu Quang Nam</a>
+                </p>
+            </section>
+
         </main>
 
-        <footer style="text-align: center;">
-            © 2023 Bản quyền thuộc về Từ Quang Nam
+        <footer>
+            © 2023 Bản quyền thuộc về Tu Quang Nam
         </footer>
 
     </div>
